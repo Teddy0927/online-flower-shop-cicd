@@ -1,0 +1,402 @@
+body {
+  background-color: #2B2B2B;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.App {
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+  font-size: 12px;
+  background-color: #2B2B2B;
+  color: #EBD7BE;
+  max-width: 100%;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: row;
+  padding: 1vw;
+}
+
+.icon {
+  padding-right: 1vw;
+}
+
+.logo {
+  padding: 3vw;
+  max-width: 20vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.navToggler {
+  color: #EBD7BE;
+  background-color: #EBD7BE;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuItem {
+  text-decoration: none;
+  border-style: double;
+  height: 50px;
+  transition: 0.3s;
+  font-size: auto;
+  text-align: center;
+  padding: 10px;
+  color: #5F7F67;
+  border-color: #EBD7BE;
+}
+
+.container.login {
+  max-width: 540px;
+  margin-top: 30px;
+}
+
+.container.register {
+  max-width: 540px;
+  margin-top: 30px;
+}
+
+.navLinkItem {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.navLinkItem.login {
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 20px;
+}
+
+.navLinkItem.register {
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 20px;
+}
+
+.loginInput {
+  color: #EBD7BE;
+  background-color: #2B2B2B;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border-color: #EBD7BE;
+}
+
+.loginButton {
+  color: #EBD7BE;
+  background-color: #000;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border-color: #EBD7BE;
+  font-size: large;
+}
+
+.registerInput {
+  color: #EBD7BE;
+  background-color: #2B2B2B;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border-color: #EBD7BE;
+}
+
+.registerButton {
+  color: #EBD7BE;
+  background-color: #000;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border-color: #EBD7BE;
+  font-size: large;
+}
+
+.icons {
+  padding-inline: 10px;
+  color: #EBD7BE;
+}
+
+.menuItem:hover {
+  background-color: #EBD7BE;
+  color: #5F7F67;
+}
+
+.slideShow {
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+}
+
+h2 {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+  margin: 10px 0 20px; 
+} 
+
+h2 span { 
+   background:#2B2B2B; 
+   padding:0 10px; 
+   font-size: auto;
+}
+
+.slidePhoto {
+  width: 100%;
+  height: auto;
+}
+
+.item {
+  max-width: 100%;
+  height: auto;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.user {
+ padding-top: 2vw;
+}
+
+.userHeading {
+  text-align: start;
+  margin-inline-start: 2vw;
+}
+
+.userSectionItem {
+  text-decoration: none;
+  border-style: double;
+  height: 50px;
+  transition: 0.3s;
+  font-size: auto;
+  text-align: center;
+  padding: 10px;
+  color: #5F7F67;
+  border-color: #EBD7BE;
+  width: 250px;
+}
+
+.userSectionItem:hover {
+  background-color: #EBD7BE;
+  color: #5F7F67;
+}
+
+.userSectionSlider {
+  margin: 30px;
+  font-size: medium;
+}
+
+.footer {
+  border: #EBD7BE;
+  border-width: 5px;
+  border-style: double;
+  margin-top: 30px;
+}
+
+.settingInput {
+  color: #EBD7BE;
+  background-color: #2B2B2B;
+  width: 500px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border-color: #EBD7BE;
+}
+
+.inputLabel {
+  font-size: 12px;
+  top: 22px;
+  background: #2B2B2B;
+  padding: 4px;
+  position: relative;
+  display: inline-block;
+  text-align: start;
+}
+
+.settingButton {
+  color: #EBD7BE;
+  background-color: #000;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border-color: #EBD7BE;
+  font-size: large;
+}
+
+.cartItemImage {
+  height: 150px;
+  width: 150px;
+  border: #EBD7BE;
+  border-width: 5px;
+  border-style: double;
+}
+
+.container.cart {
+  width: 500px;
+  justify-content: center;
+}
+
+.cartText {
+  text-align: left;
+}
+
+.cartRemoveButton {
+  background-color: #000;
+  text-align: center;
+  border-radius: 15px;
+  padding: 4px 12px;
+  position: relative;
+  left: 1rem;
+  min-width: 50px;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.paymentButton {
+  background-color: #000;
+  text-align: center;
+  border-radius: 15px;
+  padding: 4px 12px;
+  position: relative;
+  left: 1rem;
+  min-width: 50px;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 15px;
+}
+
+.cartPrice {
+  top: 100px;
+  left: 25px;
+  text-align: right;
+  position: relative;
+}
+
+.row.item {
+  border-bottom: 5px double #EBD7BE;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.btnMinus {
+  line-height: 36px;
+  font-size: 21px;
+  display: inline-block;
+  width: 36px;
+  text-align: center;
+  background-color: #5F7F67;
+  border: 0;
+}
+
+.btnPlus {
+  line-height: 36px;
+  font-size: 21px;
+  display: inline-block;
+  width: 36px;
+  text-align: center;
+  background-color: #5F7F67;
+  border: 0;
+}
+
+.quantityInput {
+  text-align: center;
+  width: 36px;
+  line-height: 30px;
+  font-size: 21px;
+  
+}
+
+.checkoutSession {
+  margin: 15px;
+}
+
+.input {
+  color: #EBD7BE;
+  background-color: #2B2B2B;
+  width: 500px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  border-color: #EBD7BE;
+}
+
+.label {
+  font-size: 12px;
+  top: 22px;
+  background: #2B2B2B;
+  padding: 4px;
+  position: relative;
+  display: inline-block;
+  text-align: start;
+}
+
+.checkoutButton {
+  color: #EBD7BE;
+  background-color: #000;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  border-color: #EBD7BE;
+  font-size: large;
+}
+
+.paymeQRCode {
+  max-width: 300px;
+}
+
+.paymentGuide {
+  margin: 30px;
+}
+
+.row.order {
+  border-bottom: 5px double #EBD7BE;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+
+.paymentPhoto {
+  max-height: 300px;
+  width: auto;
+}
+
+.container.aboutUs {
+  margin: 50px
+}

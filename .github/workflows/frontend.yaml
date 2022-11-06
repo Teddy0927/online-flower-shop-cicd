@@ -1,0 +1,24 @@
+name: frontend
+on:
+  push:
+    branches:
+      - '*'
+  workflow_dispatch:
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    container: node:latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          cd front
+          yarn install 
+          yarn build
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.6"
+      - run: |
+      pip install awscli
+      aws s3 sync ./build s3://teddy-project --delete
+      aws cloudfront create-invalidation --distribution-id E24WER426W2C04 --paths "/*"

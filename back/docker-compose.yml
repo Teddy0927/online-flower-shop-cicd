@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:5
+    restart: always
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+  backend:
+    environment:
+      JWT_SECRET: "1234"
+      PORT: 8000
+      FRONTEND_URL: "https://www.teddy-yiu.com"
+      NODEMAILER_EMAIL: "teddyhuipanyiu0927@gmail.com"
+      NODEMAILER_PASSWORD: "qxwdezgyejpwfuum"
+    depends_on:
+      - mongo
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: "ty-project1:latest"
+    ports:
+      - "8000:8000"
+
