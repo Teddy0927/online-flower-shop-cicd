@@ -26,6 +26,6 @@ jobs:
             docker pull 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
             docker-compose down
             docket-compose up -d
-          host: 172.31.8.94
-          user: ubuntu
-          key: ${{secrets.SSH_PRIVATE_KEY}}
+        host: 172.31.8.94
+        user: ubuntu
+        key: ${{secrets.SSH_PRIVATE_KEY}}
