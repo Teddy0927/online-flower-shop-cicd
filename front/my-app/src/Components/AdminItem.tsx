@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { useAppDispatch } from '../store';
 import AddItem from './AddItem';
 import AdminEditItem from './AdminEditItem';
 
 export default function AdminItem() {
-    const dispatch = useAppDispatch()
     const [showAdminItemOption, setShowAdminItemOption] = useState('')
     return (
         <div className="container-fluid">

@@ -1,13 +1,9 @@
-import axios from 'axios';
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { checkResponse } from '../auth/action';
-import { useAppDispatch, useAppSelector } from '../store';
+import React from 'react';
+import { useAppSelector } from '../store';
 import AdminEditItemList from './AdminEditItemList';
 
 export default function EditItem() {
-    const dispatch = useAppDispatch();
-    const itemsLoaded = useAppSelector(state => state.items.loading)
+    // const itemsLoaded = useAppSelector(state => state.items.loading)
     const items = useAppSelector(state => state.items.items)
 
     return (

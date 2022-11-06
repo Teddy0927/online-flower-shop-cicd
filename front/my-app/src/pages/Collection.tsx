@@ -15,7 +15,8 @@ export default function Collection() {
 
     useEffect(() => {
         getItems()
-    }, [])
+    })
+    
     return (
         <div className="container p-3">
             <h2><span>{item[0]['item_name']}</span></h2>

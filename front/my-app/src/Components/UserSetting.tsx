@@ -1,15 +1,13 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { checkResponse } from '../auth/action';
 import { useAppDispatch } from '../store';
-import Header from './Header';
-import Menu from './Menu';
 
 export default function UserSetting() {
     const dispatch = useAppDispatch();
-    const [accountDetails, setAccountDetails] = useState([]);
+    // const [accountDetails, setAccountDetails] = useState([]);
     const [errorUpdate, setErrorUpdate] = useState('');
     const [currentPassword, setCurrentPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
@@ -20,32 +18,20 @@ export default function UserSetting() {
 
 
 
-    async function getAccountDetails() {
-        const res = await axios.get('/account');
-        dispatch(checkResponse(res));
-        console.log('account data: ', res.data)
-        setAccountDetails(res.data);
-    }
+    // async function getAccountDetails() {
+    //     const res = await axios.get('/account');
+    //     dispatch(checkResponse(res));
+    //     setAccountDetails(res.data);
+    // }
 
-    useEffect(() => {
-        getAccountDetails();
-    }, [])
+    // useEffect(() => {
+    //     getAccountDetails();
+    // }, [])
 
     return (
         <div>
             <h1>User Setting</h1>
             <h3>Edit Account Detail</h3>
-            {/* <form onSubmit={async e => {
-                e.preventDefault();
-
-                const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/updateAccount`, {
-                    method: 'PATCH',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(username, contactNumber, profilePicture, addressLineOne, addressLineTwo, addressLineThree)
-                })
-            }}> */}
             <form onSubmit={handleSubmit(async data => {
                 const formData = new FormData();
                 formData.append('username', data.username);

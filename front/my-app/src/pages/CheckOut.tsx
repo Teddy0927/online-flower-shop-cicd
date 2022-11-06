@@ -1,14 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { useAppDispatch, useAppSelector } from '../store';
+import { useAppSelector } from '../store';
 import { LoadingState } from '../Components/model';
 import Skeleton from 'react-loading-skeleton';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { clearCart } from '../cart/action';
 
 
 export default function CheckOut() {
-    const dispatch = useAppDispatch();
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');

@@ -1,6 +1,6 @@
 import { AppDispatch } from "../store";
 import axios from 'axios';
-import { checkResponse, login } from "../auth/action";
+import { checkResponse } from "../auth/action";
 import { Cart } from "./state";
 
 export function loadedCart(carts: Cart[]) {

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../store';
 import { LoadingState } from './model';
 import Skeleton from 'react-loading-skeleton';
@@ -17,7 +16,7 @@ export default function UserOrder() {
         <div className="container-fluid">
             User Order
             {
-                orderLoaded != LoadingState.Loaded
+                orderLoaded !== LoadingState.Loaded
                     ? <Skeleton count={10} />
                     : orders.map((order, index) => (
                         <div key={index}>{

@@ -22,7 +22,7 @@ import Shipping from './pages/Shipping';
 import Customization from './pages/Customization';
 import CheckOut from './pages/CheckOut';
 import Payment from './pages/Payment';
-import { useAppDispatch, useAppSelector } from './store';
+import { useAppDispatch } from './store';
 import { loadCart } from './cart/action';
 import Admin from './pages/Admin';
 import EditItem from './pages/EditItem';

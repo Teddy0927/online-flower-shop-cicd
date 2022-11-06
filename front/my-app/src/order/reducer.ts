@@ -1,7 +1,6 @@
 import { OrderActions } from './action';
 import { LoadingState } from '../Components/model';
 import { OrderState } from './state';
-import produce from 'immer';
 
 const initialState: OrderState = {
     orders: [],

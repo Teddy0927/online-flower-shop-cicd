@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../logoWG.png';
 import { useSelector } from 'react-redux';
 import { useAppDispatch } from '../store';
@@ -15,6 +15,7 @@ import { clearCart } from '../cart/action';
 
 
 export default function Menu() {
+    const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const isLoggedIn = useSelector((state: RootState) => state.auth.loggedIn)
     const cartCount = useAppSelector(state => state.cart.carts);
@@ -47,12 +48,13 @@ export default function Menu() {
                             </NavLink>
                         }
                         {isLoggedIn === true &&
-                            <a className="col-4 navLinkItem" href="#" onClick={async () => {
+                            <i className="col-4 navLinkItem"  onClick={async () => {
                                 await dispatch(clearCart());
                                 await dispatch(logout());
+                                navigate('/')
                             }}>
                                 <FontAwesomeIcon className="icons" icon={solid('right-from-bracket')} />
-                                <h6 className="d-none d-md-block">Log Out</h6></a>
+                                <h6 className="d-none d-md-block">Log Out</h6></i>
                         }
                         <NavLink className="col-4 navLinkItem" to="/cart">
                             <FontAwesomeIcon className="icons" icon={solid('cart-shopping')} />

@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useEffect } from 'react';
 import moment from 'moment';
 import Skeleton from 'react-loading-skeleton';

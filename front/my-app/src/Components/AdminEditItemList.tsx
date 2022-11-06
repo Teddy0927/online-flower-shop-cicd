@@ -1,6 +1,5 @@
 import axios from 'axios';
-import e from 'express';
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkResponse } from '../auth/action';
 import { loadItems } from '../items/action';

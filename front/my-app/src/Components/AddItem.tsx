@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { checkResponse } from '../auth/action';
-import { loadItems } from '../items/action';
 import { useAppDispatch } from '../store';
 
 export default function AddItem() {
@@ -27,19 +26,15 @@ export default function AddItem() {
                 )
                 
                 dispatch(checkResponse(res));
-                // if (res.status === 200) {
-                //     alert('Successfully added item!')
-                //     dispatch(loadItems())
-                // } else if (res.status === 400) {
-                //     setError('Please try again!')
-                // } else if (res.status === 404) {
-                //     setError('Not found')
-                // }
+
                 if (res.status === 200) {
                     alert('Successfully added item')
+                    navigate('/admin')
                 } else if (res.status === 400) {
+                    setError('Failed to added item')
                     alert('Failed to add item')
                 } else if (res.status === 500) {
+                    setError('Something wrong with the server')
                     alert('There is something wrong with the server. Please try again later')
                 } else if (res.status === 401) {
                     alert('Unauthorize to add item')

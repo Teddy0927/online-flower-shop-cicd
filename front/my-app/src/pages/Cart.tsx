@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { LoadingState } from '../Components/model';
-import { clearCart, fetchDecreaseQuantity, fetchIncreaseQuantity, fetchRemoveFromCart, loadCart } from '../cart/action';
-import { loadOneItem } from '../items/action';
+import { clearCart, fetchDecreaseQuantity, fetchIncreaseQuantity, fetchRemoveFromCart } from '../cart/action';
 import Skeleton from 'react-loading-skeleton';
 import { useAppDispatch, useAppSelector } from '../store';
 import { NavLink } from 'react-router-dom';
@@ -10,7 +9,6 @@ export default function Cart() {
     const dispatch = useAppDispatch();
     const cartLoaded = useAppSelector(state => state.cart.loading);
     const carts = useAppSelector(state => state.cart.carts);
-    const items = useAppSelector(state => state.items.items);
     const [displayMoney, SetDisplayMoney] = useState('');
     async function calculateDisplayMoney() {
         let total = 0

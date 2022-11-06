@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { loggedOut } from '../auth/action';
 import AdminItem from '../Components/AdminItem';
 import AdminOrder from '../Components/AdminOrder';
-import AdminSetting from '../Components/AdminSetting';
 import { loadItems } from '../items/action';
 import { useAppDispatch } from '../store';
 

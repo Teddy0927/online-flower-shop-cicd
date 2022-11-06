@@ -5,6 +5,10 @@ on:
       - '*'
   workflow_dispatch:
 
+env:
+  AWS_ACCESS_KEY_ID: ${{secrets.SSH_PRIVATE_KEY}}
+  AWS_ACCESS_SECRET_KEY: ${{secrets.SSH_SECRET_KEY}}
+  
 jobs:
   testing:
     runs-on: ubuntu-latest
