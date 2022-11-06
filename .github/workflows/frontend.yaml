@@ -19,6 +19,6 @@ jobs:
         with:
           python-version: "3.6"
       - run: |
-      pip install awscli
-      aws s3 sync ./build s3://teddy-project --delete
-      aws cloudfront create-invalidation --distribution-id E24WER426W2C04 --paths "/*"
+          pip install awscli
+          aws s3 sync ./build s3://teddy-project --delete
+          aws cloudfront create-invalidation --distribution-id E24WER426W2C04 --paths "/*"
