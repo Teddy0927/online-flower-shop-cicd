@@ -9,8 +9,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@c3
+     - uses: actions/checkout@v3
+     - uses: actions/setup-python@c3
         with:
           python-version: "3.6"
       -run: |
