@@ -15,7 +15,6 @@ jobs:
           python-version: "3.6"
       - run: |
           cd back
-          yarn install
           pip install awscli
           aws ecr get-login-password --region ap-east-1 | docker login --username AWS --password-stdin 737976497055.dkr.ecr.ap-east-1.amazonaws.com
           docker build -t ty-project
