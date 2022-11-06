@@ -8,25 +8,25 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@c3
-        with:
-          python-version: "3.6"
-      -run: |
-          cd back
-          pip install awscli
-          aws ecr get-login-password --region ap-east-1 | docker login --username AWS --password-stdin 737976497055.dkr.ecr.ap-east-1.amazonaws.com
-          docker build -t ty-project
-          docker tag ty-project:latest 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
-          docker push 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
-      - uses: fifsky/ssh-action@master
-        with:
-        command: |
-          docker pull 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
-          docker-compose down
-          docket-compose up -d
-        host: 172.31.8.94
-        user: ubuntu
-        key: ${{secrets.SSH_PRIVATE_KEY}}
-      
+      steps:
+        - uses: actions/checkout@v3
+        - uses: actions/setup-python@c3
+          with:
+            python-version: "3.6"
+        -run: |
+            cd back
+            pip install awscli
+            aws ecr get-login-password --region ap-east-1 | docker login --username AWS --password-stdin 737976497055.dkr.ecr.ap-east-1.amazonaws.com
+            docker build -t ty-project
+            docker tag ty-project:latest 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
+            docker push 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
+        - uses: fifsky/ssh-action@master
+          with:
+          command: |
+            docker pull 737976497055.dkr.ecr.ap-east-1.amazonaws.com/ty-project:latest
+            docker-compose down
+            docket-compose up -d
+          host: 172.31.8.94
+          user: ubuntu
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+        
