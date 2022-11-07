@@ -5,10 +5,12 @@ import { useAppDispatch } from '../store';
 import { login } from '../auth/action';
 import SellingItems from './Items';
 import { loadCart } from '../cart/action';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function Body() {
+    const navigate = useNavigate();
     const dispatch = useAppDispatch();
 
     useEffect(() => {
@@ -100,13 +102,19 @@ export default function Body() {
             <div>
                 <Splide className="slideShow" options={{ type: 'loop', autoplay: true, interval: 5000,rewind: true, autoWidth: true, focus: 'center', arrows: false }} aria-label="Slide show">
                     <SplideSlide className="item">
-                        <img className="item" src={require('../splide_img1.jpeg')} alt="Beautiful flower" />
+                        <img className="item" src={require('../splide_img4.jpeg')} alt="Beautiful flower" />
+                        <h3 className="promotionText">Wanna show respect to your seniors?</h3>
+                        <button className="promotionButton" onClick={() => navigate('/collection/1')}>Senior Citizen&apos;s Day</button>
                     </SplideSlide>
                     <SplideSlide className="item">
-                        <img className="item" src={require('../splide_img2.jpeg')} alt="Flower in the garden" />
+                        <img className="item" src={require('../splide_img5.jpeg')} alt="Flower in the garden" />
+                        <h3 className="promotionText">It&apos;s Valentines Day!</h3>
+                        <button className="promotionButton" onClick={() => navigate('/collection/6')}>To your lover</button>
                     </SplideSlide>
                     <SplideSlide className="item">
-                        <img className="item" src={require('../splide_img3.jpeg')} alt="Angel flower" />
+                        <img className="item" src={require('../splide_img6.jpeg')} alt="Angel flower" />
+                        <h3 className="promotionText">Happy Lunar New Year!</h3>
+                        <button className="promotionButton" onClick={() => navigate('/collection/3')}>Relatives options</button>
                     </SplideSlide>
                     <div className="splide__progress">
                         <div className="splide__progress__bar" />

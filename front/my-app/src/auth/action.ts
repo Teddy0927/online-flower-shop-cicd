@@ -1,6 +1,5 @@
 import { AppDispatch } from "../store";
 import axios, { AxiosResponse } from 'axios';
-import { useNavigate } from "react-router-dom";
 
 export function loggedIn(token: string) {
 
@@ -46,7 +45,5 @@ export function logout() {
         delete axios.defaults.headers.common['Authorization'];
 
         dispatch(loggedOut());
-        const navigate = useNavigate()
-        navigate('/')
     }
 }

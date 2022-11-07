@@ -45,7 +45,7 @@ export default function Login() {
                         setError('Not found')
                     }
                 }}>
-                    { error }
+                    { error }<br />
                     <input className="loginInput" type='text' placeholder='Email*' pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" value={email} onChange={e => setEmail(e.currentTarget.value)}></input>
                     <input className="loginInput" type='password' placeholder='Password*' value={password} onChange={e => setPassword(e.currentTarget.value)}></input>
                     <input className="loginButton" value='Log In' type='submit'></input>

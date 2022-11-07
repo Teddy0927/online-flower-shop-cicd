@@ -7,19 +7,21 @@ export default function Collection() {
     const { id } = useParams()
     const [item, setItem] = useState([])
 
+
+
+    useEffect(() => {
     async function getItems() {
         const res = await axios.get(`/collection/${id}`)
         setItem(res.data)
-        console.log(res.data)
-    }
-
-    useEffect(() => {
-        getItems()
-    })
+        console.log('here')
+    }   
+    getItems()
+        
+    }, [setItem, id]);
     
     return (
         <div className="container p-3">
-            <h2><span>{item[0]['item_name']}</span></h2>
+            <h2><span>Selected category</span></h2>
             <div className="row d-flex flex-wrap justify-content-around">
             {
                 item.map((flower, index) => (

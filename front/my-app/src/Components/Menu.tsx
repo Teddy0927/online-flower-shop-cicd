@@ -37,12 +37,12 @@ export default function Menu() {
                     <div className="col-4 row">
                         {!isLoggedIn &&
                             <NavLink className="col-4 navLinkItem" to="/login">
-                                <FontAwesomeIcon className="icons" icon={solid('user')} />
+                                <FontAwesomeIcon size="2x" className="icons" icon={solid('user')} />
                                 <h6 className="d-none d-md-block">Login</h6>
                             </NavLink>}
                         {isLoggedIn === true &&
                             <NavLink className="col-4 navLinkItem" to="/user">
-                                <FontAwesomeIcon className="icons" icon={solid('user')} />
+                                <FontAwesomeIcon size="2x" className="icons" icon={solid('user')} />
                                 <h6 className="d-none d-md-block">Welcome!</h6>
                                 {/* {loggedUsername} */}
                             </NavLink>
@@ -53,11 +53,11 @@ export default function Menu() {
                                 await dispatch(logout());
                                 navigate('/')
                             }}>
-                                <FontAwesomeIcon className="icons" icon={solid('right-from-bracket')} />
+                                <FontAwesomeIcon size="2x" className="icons" icon={solid('right-from-bracket')} />
                                 <h6 className="d-none d-md-block">Log Out</h6></i>
                         }
                         <NavLink className="col-4 navLinkItem" to="/cart">
-                            <FontAwesomeIcon className="icons" icon={solid('cart-shopping')} />
+                            <FontAwesomeIcon size="2x" className="icons" icon={solid('cart-shopping')} />
                             <h6 className="d-none d-md-block">Cart ({cartCount.length})</h6>
                         </NavLink>
                     </div>
@@ -68,12 +68,12 @@ export default function Menu() {
                     <Navbar.Collapse className="container-fluid" id="basic-navbar-nav">
                         <div className="container">
                             <ul className="menu row">
-                                <li className="col-sm menuItem"><NavLink to='collection/1'>PRESERVED FLOWER BOUQUET</NavLink></li>
-                                <li className="col-sm menuItem"><NavLink to='collection/2'>GLASS DOME</NavLink></li>
-                                <li className="col-sm menuItem"><NavLink to='collection/3'>FLOWER BOXES</NavLink></li>
-                                <li className="col-sm menuItem"><NavLink to='collection/4'>BLUETOOTH SPEAKER</NavLink></li>
-                                <li className="col-sm menuItem"><NavLink to='collection/5'>FANTASY</NavLink></li>
-                                <li className="col-sm menuItem"><NavLink to='collection/6'>ROSE BEAR</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/1'>BOUQUET</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/2'>GLASS DOME</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/3'>FLOWER BOXES</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/4'>BLUETOOTH SPEAKER</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/5'>FANTASY</NavLink></li>
+                                <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/6'>ROSE BEAR</NavLink></li>
                             </ul>
                         </div>
                     </Navbar.Collapse>
@@ -82,12 +82,12 @@ export default function Menu() {
             <div className="bottom d-none d-lg-block">
                 <div className="container">
                     <ul className="menu row">
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/1'>PRESERVED FLOWER BOUQUET</NavLink></li>
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/2'>GLASS DOME</NavLink></li>
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/3'>FLOWER BOXES</NavLink></li>
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/4'>BLUETOOTH SPEAKER</NavLink></li>
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/5'>FANTASY</NavLink></li>
-                        <li className="col-sm menuItem"><NavLink className="navLinkItem" to='collection/6'>ROSE BEAR</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/1'>BOUQUET</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/2'>GLASS DOME</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/3'>FLOWER BOXES</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/4'>BLUETOOTH SPEAKER</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/5'>FANTASY</NavLink></li>
+                        <li className="col-sm-2 menuItem"><NavLink className="navLinkItem" to='collection/6'>ROSE BEAR</NavLink></li>
                     </ul>
                 </div>
             </div>
